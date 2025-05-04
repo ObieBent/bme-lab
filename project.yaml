@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: bme-lab
+  namespace: openshift-gitops
+spec: 
+  clusterResourceWhiteList: 
+    - group: '*'
+      kind: '*'
+    destinations:
+    - namespace: '*'
+      server: '*'
+    sourceRepos: 
+    - '*'

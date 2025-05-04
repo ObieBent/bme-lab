@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps-bme-lab
+  namespace: openshift-gitops
+spec:
+  project: bme-lab
+  sources:
+    - repoURL: https://github.com/ObieBent/bme-lab.git
+      targetRevision: main
+      path: applications
+  destination:
+    server: https://kubernetes.default.svc
