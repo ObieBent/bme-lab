@@ -4,7 +4,7 @@ metadata:
   name: bme-lab
   namespace: openshift-gitops
 spec:
-  clusterResourceWhiteList:
+  clusterResourceWhitelist:
     - group: "*"
       kind: "*"
   destinations:
