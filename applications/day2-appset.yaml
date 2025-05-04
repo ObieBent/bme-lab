@@ -19,9 +19,7 @@ spec:
                 - appName: self-provisioning
                   path: live/self-provisioning
                   revision: main
-          - clusters:
-              selector:
-                matchLabels:
+          - clusters: {}
   strategy:
     type: RollingSync
     rollingSync:
