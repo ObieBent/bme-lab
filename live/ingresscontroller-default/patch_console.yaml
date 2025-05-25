@@ -1,0 +1,6 @@
+- op: add
+  path: "/spec/componentRoutes"
+  value:
+    - name: custom-console
+      namespace: openshift-console
+      hostname: "console.apps.bme.test.metalkube.org"
