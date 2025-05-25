@@ -16,9 +16,9 @@ spec:
                 - appName: oauth
                   path: live/oauth
                   revision: main
-                #- appName: self-provisioning
-                #path: live/self-provisioning
-                #revision: main
+                - appName: self-provisioning
+                  path: live/self-provisioning
+                  revision: main
           - clusters: {}
   strategy:
     type: RollingSync
@@ -34,11 +34,11 @@ spec:
               operator: In
               values:
                 - ingresscontroller-default
-        #- matchExpressions:
-        #- key: compLabel
-        #operator: In
-        #values:
-        #- self-provisioning
+        - matchExpressions:
+            - key: compLabel
+              operator: In
+              values:
+                - self-provisioning
   goTemplate: true
   goTemplateOptions:
     - missingkey=error
